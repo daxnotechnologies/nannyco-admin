@@ -5,6 +5,9 @@ export const Parents = [
         Address: '7485 Second Rd.Powder Springs, GA 30127',
         Phone: '0311-5522663',
         username: 'Danny_123',
+        Date_of_Birth:'29-10-1987',
+        Gender:'Male',
+        email:'123@gmail.com',
         img: '1',
 
 
@@ -16,6 +19,9 @@ export const Parents = [
         Address: '7485 Second Rd.Powder Springs, GA 30127',
         Phone: '0311-5522663',
         username: 'Danny_123',
+        Date_of_Birth:'29-10-1987',
+        Gender:'Male',
+        email:'123@gmail.com',
         img: '5',
 
 
@@ -27,6 +33,9 @@ export const Parents = [
         Address: '7485 Second Rd.Powder Springs, GA 30127',
         Phone: '0311-5522663',
         username: 'Danny_123',
+        Date_of_Birth:'29-10-1987',
+        Gender:'Male',
+        email:'123@gmail.com',
         img: '6',
 
 
@@ -37,6 +46,9 @@ export const Parents = [
         Address: '7485 Second Rd.Powder Springs, GA 30127',
         Phone: '0311-5522663',
         username: 'Danny_123',
+        Date_of_Birth:'29-10-1987',
+        Gender:'Male',
+        email:'123@gmail.com',
         img: '2',
 
 
@@ -57,6 +69,9 @@ export const Parents = [
         Address: '7485 Second Rd.Powder Springs, GA 30127',
         Phone: '0311-5522663',
         username: 'Danny_123',
+        Date_of_Birth:'29-10-1987',
+        Gender:'Male',
+        email:'123@gmail.com',
         img: '4',
 
 

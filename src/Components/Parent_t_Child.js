@@ -1,53 +1,48 @@
 import React from 'react'
 import AllChilds from './All_Childs'
+import ParentDetails from './ParentDetails'
+import { Parents } from './Parents';
 
 
 function Parent_t_Child(props) {
 
-    const Parents =
-    {
-        id: 1,
-        parent: 'Jason Crejza',
-        Address: '7485 Second Rd.Powder Springs, GA 30127',
-        Phone: '0311-5522663',
-        username: 'Danny_123',
-        img: '1',
-        Date_of_Birth: '29-10-1998',
-        Gender: 'Male',
-        email:'danny@123'
-
-
-
-    }
 
 
     return (
         <>
-        <div className='w-[1150px] bg-white rounded-[8px] border-[1px] absolute left-[400px] mt-[10px]'>
-            <div className='flex'>
-                <p className='w-[300px] font-Poppins m-10 text-2xl font-semibold  '>Parent Details</p>
+  {
+                Parents.filter(function (parent) {
+                    return parent.id === props.parent;
+                }).map((val, id) => {
 
-            </div>
-            <div className=' w-[100%] h-[300px] bg-white '>
-                <img class="w-[180px] h-[180px] absolute -mt-2 ml-10 rounded-full" src={require('./profile/pf' + Parents.img + '.jpg')} alt="Neil image" />
-                <div className='flex flex-col ml-[280px] font-Poppins text-lg gap-4 '>
-                    <label className='text-[#6d6a6a]'> <label   className='text-xl font-medium  text-black '>Name: </label> {Parents.parent}</label>
-                    <label className='text-[#6d6a6a]'>  <label className='text-xl font-medium text-black'>Username: </label>{Parents.username}</label>
-                    <label className='text-[#6d6a6a]'>  <label className='text-xl font-medium text-black'>Date of Birth: </label>{Parents.Date_of_Birth}</label>
-                    <label className='text-[#6d6a6a]'> <label className='text-xl font-medium text-black'>Gender: </label>{Parents.Gender}</label>
-                    <label className='text-[#6d6a6a]'>  <label className='text-xl font-medium text-black'>Address: </label>{Parents.Address}</label>
-                    <label className='text-[#6d6a6a]'> <label className='text-xl font-medium text-black'>Email: </label>{Parents.email}</label>
-                </div>
-            </div>
+                    const a = val.img
 
+                    return <ParentDetails
+                    key={id}
+                    parent={val.parent}
+                    username= {val.username}
+                    Date_of_Birth={val.Date_of_Birth}
+                    Gender ={val.Gender}
+                    Address={val.Address}
+                    email={val.email}
 
-
-
-        </div>
-         <AllChilds p={props.parent}/>
+       
 
 
-    </>
+
+
+                    img={require('./profile/img' + a + '.png')}
+
+
+                    />
+                })
+            }
+
+
+            <AllChilds p={props.parent} />
+
+
+        </>
     )
 }
 
