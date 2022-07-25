@@ -1,34 +1,31 @@
-import './App.css';
-import Navbar from './Components/Navbar';
-import Order_placed from './Components/All_Parents';
-import AllParents from './Components/All_Parents';
-import Parent_t_Child from './Components/Parent_t_Child';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navigation from "./Components/Navigation"
+import Dashboard from "./Components/Dashboard"
+import ManageBookings from "./Components/ManageBookings"
+import AllNanies from "./Components/AllNanies"
+import ManageMemberships from "./Components/ManageMemberships"
+import AllParents from "./Components/AllParents"
+import NannyProfile from "./Components/NannyProfile"
+import Login from "./Components/Login"
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import AllNanies from './Components/All Nanies';
-function App() {
-  
-
+export default function NannyRoutes() {
   return (
-    <div className='App'>
-      <Navbar/>
-      <Router>
-        <Routes>
-          <Route exact path='/' element={<AllParents/>}/>
-
-          <Route exact path='/Nanny' element={<AllNanies/>}/>
-
-        </Routes>
-      </Router>
-   
- 
-
-    </div>
+    <Router>
+    <Routes>
+      <Route path="/" element={<Navigation />}>
+      <Route path="/Login" element={<Login />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/AllNanies" element={<AllNanies />} />
+        <Route path="/AllParents" element={<AllParents />} />
+        <Route path="/ManageBookings" element={<ManageBookings />} />
+        <Route path="/ManageMemberships" element={<ManageMemberships />} />
+        <Route path="/NannyProfile" element={<NannyProfile />} />
+      </Route>
+    </Routes>
+    </Router>
   );
 }
 
-export default App;
+
