@@ -1,26 +1,32 @@
 import './App.css';
-import Login from './components/Login';
-import Signup from './components/Signup';
+import Navbar from './Components/Navbar';
+import Order_placed from './Components/All_Parents';
+import AllParents from './Components/All_Parents';
+import Parent_t_Child from './Components/Parent_t_Child';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from 'react-router-dom';
-import Navbar from './components/Navbar';
-// import Home from './components/Home';
+
+import AllNanies from './Components/All Nanies';
 function App() {
   
 
   return (
-    <div className="text-2xl ">
-         <Router>
+    <div className='App'>
+      <Navbar/>
+      <Router>
         <Routes>
-          <Route exact path='/' element={< Login />}></Route>
-          <Route exact path='/Login' element={< Login />}></Route>
-          <Route exact path='/Signup' element={< Signup />}></Route>
-          <Route exact path='/Home' element={< Navbar />}></Route>
+          <Route exact path='/' element={<AllParents/>}/>
+
+          <Route exact path='/Nanny' element={<AllNanies/>}/>
+
         </Routes>
       </Router>
+   
+ 
+
     </div>
   );
 }
